@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  /* Night OwL Color Palette */
+  --color-night-900: #011627;
+  --color-night-800: #0d293e;
+  --color-night-700: #1d3b53;
+  --color-night-600: #2e4a62;
+  --color-night-500: #5f7e97;
+
+  --color-owl-amber: #f78c6c;
+  --color-owl-cyan: #7fdbca;
+  --color-owl-purple: #c792ea;
+  --color-owl-yellow: #ffcb8b;
+  --color-owl-blue: #82aaff;
+  --color-owl-green: #addb67;
+  --color-owl-pink: #ff5874;
+
+  --color-coffee-dark: #3c2415;
+  --color-coffee-medium: #6f4e37;
+  --color-coffee-light: #c4a484;
+  --color-coffee-cream: #fffdd0;
+
+  /* Fonts */
+  --font-display: "JetBrains Mono", "Fira Code", monospace;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-night-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-night-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-owl-cyan);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-owl-purple);
+  color: var(--color-night-900);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-night-900);
+  color: #d6deeb;
+  overflow-x: hidden;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 20px var(--color-owl-cyan), 0 0 40px var(--color-owl-cyan);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Twinkle animation for stars */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Steam animation for coffee */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px) scaleX(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-20px) scaleX(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-steam {
+  animation: steam 2s ease-out infinite;
+}
+
+/* Typing cursor */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
