@@ -4,7 +4,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "./ScrollReveal";
 const projects: {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
@@ -12,12 +12,12 @@ const projects: {
   status?: "completed" | "in-progress" | "concept";
 }[] = [
   {
-    title: "King God Castle Toolkit",
+    title: "GameForge Toolkit",
     description:
-      "A powerful desktop utility for King God Castle game. Download game versions and convert assets for Unity. Built with Tauri v2, Next.js 15, Rust, and TypeScript.",
+      "A comprehensive desktop app for reverse-engineering Android game assets and API traffic. Features MITM proxy, asset converter, IL2CPP dumper, and multi-game profile system. Built with Tauri v2, Next.js 15, and Rust.",
     image: "/projects/kgc-toolkit.png",
     tags: ["Tauri", "Next.js", "Rust", "TypeScript"],
-    githubUrl: "https://github.com/nowl-it/King-God-Castle-Toolkit",
+    githubUrl: "https://github.com/nowl-it/Reverse-Game-Android-Toolkit",
     color: "owl-cyan",
     status: "completed",
   },
@@ -30,6 +30,15 @@ const projects: {
     liveUrl: "https://kgc-team-share.vercel.app",
     githubUrl: "https://github.com/nowl-it/kgc-team-share",
     color: "owl-purple",
+    status: "completed",
+  },
+  {
+    title: "Unity IL2CPP RE Toolkit",
+    description:
+      "Toolkit and documentation for reverse-engineering Unity IL2CPP Android games. Includes MITM proxy scripts, AES decryption, asset extraction, and step-by-step guides.",
+    tags: ["Python", "Reverse Engineering", "Unity", "IL2CPP"],
+    githubUrl: "https://github.com/nowl-it/android-reverse-engineering",
+    color: "owl-amber",
     status: "completed",
   },
   {
@@ -141,6 +150,10 @@ export function Projects() {
                   {project.status === "concept" ? (
                     <div className="w-full h-full bg-gradient-to-br from-night-800 to-night-700 flex items-center justify-center">
                       <span className="text-6xl">💡</span>
+                    </div>
+                  ) : !project.image ? (
+                    <div className="w-full h-full bg-gradient-to-br from-night-800 to-night-700 flex items-center justify-center">
+                      <span className="text-6xl">📚</span>
                     </div>
                   ) : (
                     <img

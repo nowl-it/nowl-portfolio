@@ -43,11 +43,15 @@ export function About() {
                   </p>
                   <p className="pl-4">
                     <span className="text-owl-blue">role</span>:{" "}
-                    <span className="text-owl-green">"Web Developer"</span>;
+                    <span className="text-owl-green">
+                      "Front-end Developer"
+                    </span>
+                    ;
                   </p>
                   <p className="pl-4">
                     <span className="text-owl-blue">status</span>:{" "}
-                    <span className="text-owl-green">"Student"</span>;
+                    <span className="text-owl-green">"Intern (Certified)"</span>
+                    ;
                   </p>
                   <p className="pl-4">
                     <span className="text-owl-blue">location</span>:{" "}
@@ -93,13 +97,13 @@ export function About() {
                 the night - just me, my keyboard, and an endless cup of coffee.
               </p>
               <p>
-                As a <span className="text-owl-cyan">full-stack developer</span>
-                , I specialize in building modern web applications with{" "}
-                <span className="text-owl-purple">React</span>,
+                As a <span className="text-owl-cyan">front-end developer</span>,
+                I specialize in crafting beautiful, interactive user interfaces
+                with <span className="text-owl-purple">React</span>,
                 <span className="text-owl-blue"> TypeScript</span>, and
-                <span className="text-owl-green"> Node.js</span>. I believe in
-                writing clean, maintainable code that not only works but is a
-                joy to read.
+                <span className="text-owl-green"> Tailwind CSS</span>. I'm
+                passionate about pixel-perfect designs, smooth animations, and
+                delivering great user experiences.
               </p>
               <p>
                 When I'm not coding, you'll find me exploring new technologies,
